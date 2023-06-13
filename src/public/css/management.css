@@ -1,0 +1,164 @@
+.management__content {
+    margin: 0 auto;
+        padding: 30px 15px;
+        max-width: 1230px;
+}
+
+.management__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.search-table{
+    position: relative;
+    width: 90%;
+    height: 55%;
+    border: solid 5px #000;
+    padding: 40px;
+    padding-bottom: 60px;
+}
+
+.search-table_inner{
+    width: 107%;
+}
+.search-table_content{
+    height: 30px;
+    margin-bottom: 15px;
+}
+.search-table_name {
+    width: 150px;
+}
+
+.name{
+    padding: 10px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+    margin-top: 15px;
+}
+
+.search-table_date{
+    width: 50%;
+}
+
+.date{
+    display: inline;
+    padding: 10px;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        appearance: none;
+        margin-top: 15px;
+}
+
+.email{
+    padding: 10px;
+        width: 300px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        appearance: none;
+        margin-top: 15px;
+}
+.search-table-category_gender{
+    width: 35px;
+}
+
+.search-table_gender{
+    padding-right: 15px;
+}
+.radio__btn {
+    appearance: none;
+}
+.radio__text {
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.radio__text::before {
+    content: '';
+    display: block;
+    border: solid 2px #333333;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.radio__btn:checked+.radio__text::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+}
+
+.search-table_button{
+    padding-top: 20px;
+    width: 15%;
+    position: absolute;
+    left: 50%;
+}
+.search-button{
+        width: 130px;
+        height: 40px;
+        border: none;
+        border-radius: 3px;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bolder;
+}
+.reset-button{
+    display: flex;
+        flex-direction: column;
+        padding-left: 35px;
+        height: 15px;
+        border: none;
+        background: #fff;
+        cursor: pointer;
+        text-decoration: underline;
+}
+
+svg.w-5.h-5 {
+    width: 30px;
+    height: 30px;
+}
+
+.id{
+    display: flex;
+    justify-content: end;
+}
+
+.list-table_info{
+    border-bottom: solid 2px #000;
+    height: 40px;
+}
+
+.list-table_data{
+    text-align: center;
+    height: 40px;
+}
+
+.delete-button{
+    width: 80px;
+        height: 20px;
+        border: none;
+        border-radius: 3px;
+        background: #000;
+        color: #fff;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bolder;
+}
