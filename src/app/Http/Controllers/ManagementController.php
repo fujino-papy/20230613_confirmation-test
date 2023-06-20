@@ -11,7 +11,7 @@ class ManagementController extends Controller
     {
         $contacts = Management::all();
         $contacts = Management::Paginate(10);
-        return view('management', compact('contacts'));
+        return view('management', ['contacts' => $contacts]);
     }
 
     public function search(Request $request)
@@ -19,8 +19,7 @@ class ManagementController extends Controller
         $contacts = Management::with('management')->Family_nameSearch($request->family_name)->Given_nameSearch($request->given_name)->EmailSearch($request->email)->GenderSearch($request->gender)->get();
         $management = Management::all();
 
-        $contact = compact(
-            'contacts'
+        $contact = compact('contacts'
         );
 
         return view('management', $contact);

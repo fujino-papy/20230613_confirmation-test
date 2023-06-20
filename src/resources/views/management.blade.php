@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/management.css') }}" />
     <link rel="stylesheet" href="{{ asset('/src/resources/css/app.css')}}"/>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <main>
@@ -97,7 +96,6 @@
             @endforeach
         </table>
     </div>
-    {!! $contacts->links() !!}
 </main>
 </html>
 
