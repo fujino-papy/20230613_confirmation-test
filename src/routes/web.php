@@ -26,3 +26,4 @@ Route::get('/management', [ManagementController::class, 'index']);
 Route::post('/management', [ManagementController::class, 'search']);
 Route::get('/management', [ManagementController::class, 'search']);
 Route::get('/contacts/confirm', [ContactController::class, 'send']);
+Route::delete('/management', [ManagementController::class, 'destroy']);

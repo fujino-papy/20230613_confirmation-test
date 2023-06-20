@@ -11,7 +11,7 @@ class ManagementController extends Controller
     {
         $contacts = Management::all();
         $contacts = Management::Paginate(10);
-        return view('management',compact('contacts'),)->with('management',$contacts);
+        return view('management', compact('contacts'));
     }
 
     public function search(Request $request)
@@ -24,5 +24,11 @@ class ManagementController extends Controller
         );
 
         return view('management', $contact);
+    }
+
+    public function destroy(Request $contacts)
+    {
+        Management::find($contacts->id)->delete();
+        return redirect('management',$contacts);
     }
 }

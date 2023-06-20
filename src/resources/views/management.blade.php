@@ -86,15 +86,18 @@
                 <td>{{$contacts->email}}</td>
                 <td>{{$contacts->content}}</td>
                 <td>
-                    <form  class="id">
-                        <input class="delete-button" data-user_id="{{$contacts->id}}" type="submit" class="btn btn-danger btn-dell" value="削除">
+                    <form class="delete-form" action="/contacs/delete" method="POST">
+                    @method('DELETE')
+                    @csrf
+                        <input type="hidden" name="id" value="{{ $contacts['id'] }}">
+                        <button class="delete-button" type="submit">削除</button>
                     </form>
                 </td>
             </tr>
             @endforeach
-            {{$contacts->links() }}
         </table>
     </div>
+    {!! $contacts->links() !!}
 </main>
 </html>
 
