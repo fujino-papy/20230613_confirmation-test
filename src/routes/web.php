@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ManagementController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,4 @@ Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/management', [ManagementController::class, 'index']);
 Route::post('/management', [ManagementController::class, 'search']);
 Route::get('/management', [ManagementController::class, 'search']);
+Route::get('/contacts/confirm', [ContactController::class, 'send']);

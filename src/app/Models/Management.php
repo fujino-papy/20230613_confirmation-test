@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Management extends Model
 {
     use HasFactory;
@@ -51,14 +52,7 @@ class Management extends Model
             $query->where('gender', $gender);
         }
     }
-
-    public function scopeDateSearch($query, $date)
-    {
-        if (isset($from) && isset($until)) {
-            $query = $date->whereBetween("date", [$from, $until])->where('date', $date);
-        }
-    }
-    public function user()
+    public function management()
     {
         return $this->belongsTo(User::class);
     }

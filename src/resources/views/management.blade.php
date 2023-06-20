@@ -78,21 +78,21 @@
                 <th scope ="col">メールアドレス</th>
                 <th scope ="col">ご意見</th>
             </tr>
-            @foreach($contacts as $contact)
+            @foreach($contacts as $contacts);
             <tr class="list-table_data">
-                <td>{{$contact->id}}</td>
-                <td>{{$contact->family_name}}</td>
-                <td>{{$contact->gender}}</td>
-                <td>{{$contact->email}}</td>
-                <td>{{$contact->content}}</td>
+                <td>{{$contacts->id}}</td>
+                <td>{{$contacts->family_name}}</td>
+                <td>{{$contacts->gender}}</td>
+                <td>{{$contacts->email}}</td>
+                <td>{{$contacts->content}}</td>
                 <td>
                     <form  class="id">
-                        <input class="delete-button" data-user_id="{{$contact->id}}" type="submit" class="btn btn-danger btn-dell" value="削除">
+                        <input class="delete-button" data-user_id="{{$contacts->id}}" type="submit" class="btn btn-danger btn-dell" value="削除">
                     </form>
                 </td>
             </tr>
             @endforeach
-            {{ $contacts->links('vendor.pagination.tailwind') }}
+            {{$contacts->links() }}
         </table>
     </div>
 </main>
