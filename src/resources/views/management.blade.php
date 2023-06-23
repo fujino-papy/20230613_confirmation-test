@@ -66,8 +66,6 @@
         </div>
         </form>
     </div>
-    <div>
-    </div>
     <div class="list-table">
         <table class="list-table_inner" style="width: 100%; max-width: 0 auto;">
             <tr class="list-table_info">
@@ -85,7 +83,7 @@
                 <td>{{$contacts->email}}</td>
                 <td>{{$contacts->content}}</td>
                 <td>
-                    <form class="delete-form" action="/contacs/delete" method="POST">
+                    <form class="delete-form" action="/management/delete" method="POST">
                     @method('DELETE')
                     @csrf
                         <input type="hidden" name="id" value="{{ $contacts['id'] }}">
