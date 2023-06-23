@@ -9,7 +9,6 @@ class ManagementController extends Controller
 {
     public function index()
     {
-        $contacts = Management::all();
         $contacts = Management::Paginate(10);
         return view('management', ['contacts'=>$contacts]);
     }
