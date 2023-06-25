@@ -28,28 +28,28 @@ class Management extends Model
     public function scopeFamily_nameSearch($query, $family_name)
     {
         if (!empty($family_name)) {
-            $query->where('family_name', $family_name);
+            $query->where('family_name','like','%'. $family_name.'%');
         }
     }
 
     public function scopeGiven_nameSearch($query, $given_name)
     {
         if (!empty($given_name)) {
-            $query->where('given_name', $given_name);
+            $query->where('given_name', 'like', '%' . $given_name . '%');
         }
     }
 
     public function scopeEmailSearch($query, $email)
     {
         if (!empty($email)) {
-            $query->where('email', $email);
+            $query->where('email', 'like', '%' . $email . '%');
         }
     }
 
     public function scopeGenderSearch($query,$gender)
     {
         if(!empty($gender)) {
-            $query->where('gender', $gender);
+            $query->where('gender', 'like', '%' . $gender . '%');
         }
     }
     public function management()

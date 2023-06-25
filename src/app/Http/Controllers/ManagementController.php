@@ -18,16 +18,12 @@ class ManagementController extends Controller
         $contacts = Management::with('management')->Family_nameSearch($request->family_name)->Given_nameSearch($request->given_name)->EmailSearch($request->email)->GenderSearch($request->gender)->get();
         $management = Management::all();
 
-        $contact = compact(
-            'contacts'
-        );
-
-        return view('management', $contact);
+        return view('management', compact('contacts','management'));
     }
 
     public function destroy(Request $contacts)
     {
         Management::find($contacts->id)->delete();
-        return redirect('management',$contacts);
+        return redirect('management');
     }
 }
