@@ -58,8 +58,8 @@
                     </tr>
                     <tr class="search-table_content">
                         <td class="search-table_button">
-                        <button class="search-button"  type="submit" name="search">検索</button>
-                        <button class="reset-button" type="submit" name="reset">リセット</button>
+                        <button class="search-button" action="/management/search"  type="submit" name="search">検索</button>
+                        <button class="reset-button" action="/management/reset" type="submit" name="reset">リセット</button>
                         </td>
                     </tr>
                 </table>
