@@ -17,9 +17,8 @@ class ManagementController extends Controller
     {
         $contacts = Management::with('management')->Family_nameSearch($contacts->family_name)->Given_nameSearch($contacts->given_name)->EmailSearch($contacts->email)->GenderSearch($contacts->gender)->get();
         $management = Management::all();
-        dd($contacts);
 
-        return redirect('management')->with([$contacts->all()]);
+        return view('management', compact('contacts','management'));
     }
 
     public function destroy(Request $contacts)
