@@ -71,7 +71,8 @@
         <table class="list-table_inner" style="width: 100%; max-width: 0 auto;">
             <tr class="list-table_info">
                 <th scope ="col">ID</th>
-                <th scope ="col">お名前</th>
+                <th scope ="col">名字</th>
+                <th scope ="col">名前</th>
                 <th scope ="col">性別</th>
                 <th scope ="col">メールアドレス</th>
                 <th scope ="col">ご意見</th>
@@ -80,6 +81,7 @@
             <tr class="list-table_data">
                 <td>{{$contacts->id}}</td>
                 <td>{{$contacts->family_name}}</td>
+                <td>{{$contacts->given_name}}</td>
                 <td>{{$contacts->gender}}</td>
                 <td>{{$contacts->email}}</td>
                 <td>{{$contacts->content}}</td>
