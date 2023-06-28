@@ -18,6 +18,7 @@ class ManagementController extends Controller
         $contacts = Management::with('management')->Family_nameSearch($contacts->family_name)->Given_nameSearch($contacts->given_name)->EmailSearch($contacts->email)->GenderSearch($contacts->gender)->get();
         $management = Management::all();
 
+        $contacts = Management::Paginate(10);
         return view('management', compact('contacts','management'));
     }
 

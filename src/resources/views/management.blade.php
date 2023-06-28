@@ -66,7 +66,8 @@
             </div>
         </form>
     </div>
-    {{$contacts->links('vendor.pagination.tailwind')}}
+    {{$contacts->limks()}}
+    {{-- {{$contacts->links('vendor.pagination.tailwind')}} --}}
     <div class="list-table">
         <table class="list-table_inner" style="width: 100%; max-width: 0 auto;">
             <tr class="list-table_info">
