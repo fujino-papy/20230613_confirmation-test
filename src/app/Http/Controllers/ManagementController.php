@@ -13,10 +13,11 @@ class ManagementController extends Controller
         return view('management', ['contacts'=>$contacts]);
     }
 
-    public function search(Request $request)
+    public function search(Request $contacts)
     {
-        $contacts = Management::with('management')->Family_nameSearch($request->family_name)->Given_nameSearch($request->given_name)->EmailSearch($request->email)->GenderSearch($request->gender)->get();
-        $management = Management::all();
+        $contacts = Management::with('management')->Family_nameSearch($contacts->family_name)->Given_nameSearch($contacts->given_name)->EmailSearch($contacts->email)->GenderSearch($contacts->gender)->get();
+        $contacts = Management::all();
+        dd($contacts);
 
         return redirect('management')->with([$contacts->all()]);
     }
