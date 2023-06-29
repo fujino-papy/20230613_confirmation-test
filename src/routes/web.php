@@ -23,6 +23,7 @@ Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 Route::get('/contacts/confirm', [ContactController::class, 'send']);
+Route::get('/contacts/search', [ManagementController::class, 'reset']);
 Route::get('/contacts/search', [ManagementController::class, 'search']);
 Route::get('/management', [ManagementController::class, 'index']);
 Route::delete('/management/delete', [ManagementController::class, 'destroy']);
