@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>管理ページ</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
+        <link rel="stylesheet" href="{{ asset('/src/resources/css/app.css')}}"/>
     <link rel="stylesheet" href="{{ asset('css/management.css') }}" />
-    <link rel="stylesheet" href="{{ asset('/src/resources/css/app.css')}}"/>
 </head>
 
 <main>
@@ -59,7 +59,7 @@
                     <tr class="search-table_content">
                         <td class="search-table_button">
                         <button class="search-button"  type="submit" name="search">検索</button>
-                        <button class="reset-button"  type="submit" name="reset">リセット</button>
+                        <button class="reset-button"  type="submit" formaction="/management" name="reset">リセット</button>
                         </td>
                     </tr>
                 </table>

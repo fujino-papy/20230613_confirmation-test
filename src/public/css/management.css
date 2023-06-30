@@ -136,6 +136,10 @@ svg.w-5.h-5 {
     height: 30px;
 }
 
+.paginate{
+    background-color: aqua;
+}
+
 .id{
     display: flex;
     justify-content: end;

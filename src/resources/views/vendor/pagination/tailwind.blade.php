@@ -17,7 +17,7 @@
                 </p>
             </div>
 
-            <div>
+            <div class="paginate">
                 <span class="relative z-0 justify-content-right shadow-sm rounded-md">
                     {{-- Previous Page Link --}}
                     @if ($paginator->onFirstPage())
